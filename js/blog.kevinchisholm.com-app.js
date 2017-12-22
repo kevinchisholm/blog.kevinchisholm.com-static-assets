@@ -11,7 +11,7 @@
     app.constants = {};
 
     app.config = {
-        debugOverride: false
+        debugOverride: true
     };
 
     //initializes the applcation
@@ -33,7 +33,7 @@
 
         app.loadSocialPlugin();
 
-        // app.addVideoIconsToRecentEntries();
+        app.addVideoIconsToRecentEntries();
 
         app.report();
     };
@@ -110,16 +110,16 @@
         return retObj;
     };
 
-    // app.addVideoIconsToRecentEntries = function () {
-    //     var $anchors = $('#secondary .widget.widget_recent_entries ul li a');
+    app.addVideoIconsToRecentEntries = function () {
+        var $anchors = $('#secondary .widget.widget_recent_entries ul li a');
         
-    //     $anchors.each(function () {
-    //         var $this = $(this),
-    //             thisText = $this.text();
+        $anchors.each(function () {
+            var $this = $(this),
+                thisText = $this.text();
             
-    //         $this.html('<i class="fa fa-file-video-o" style="font-size: 14px;margin-right: 5px;"></i>' + thisText);
-    //     }); 
-    // };
+            $this.html('<i class="fa fa-file-text" style="font-size: 14px;margin-right: 5px;"></i>' + thisText);
+        }); 
+    };
 
     app.constants.SOCIAL_PLUGIN_RQEUIRE_URL = 'https://blog.kevinchisholm.com/js/social-plugin/require.js';
 

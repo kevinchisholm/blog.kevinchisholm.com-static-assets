@@ -30,10 +30,67 @@ body.single #primary #main .post .entry-content h2 {
     background-color: #444;
     padding: 2%;
 }
+
 #hs-content > header > div > .hs-main-title {
     padding: 2%;
     background-color: #2f4650;
 }
+
+#secondary .widget {
+    padding: 20px;
+    outline: 8px solid #ccc;
+}
+
+#secondary .widget-title {
+    background-color: #2f4650;
+    padding: 10px;
+    color: #fff;
+}
+
+#secondary .widget {
+    padding: 20px;
+    outline: 8px solid #ccc;
+}
+
+#secondary  .widget.widget_recent_entries li {
+    background-color: #ededed;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#secondary  .widget.widget_recent_entries li:hover {
+	cursor: pointer;
+    background-color: #EE3B24;
+}
+
+#secondary  .widget.widget_recent_entries li:hover a {
+    color: #fff;
+}
+
+body.single #primary #main .post .entry-content h2 {
+    margin-top: -15px;
+}
+
+article > div > h2:nth-child(2){
+    padding: 10px;
+    outline: 8px solid #ccc;
+    background-color: #ededed;
+    overflow: auto;
+}
+
+article > div > h2{
+    padding: 10px;
+    outline: 8px solid #ccc;
+	background-color: #ededed;
+	overflow: auto;
+}
+
+iframe[src^="https://www.youtube.com"] {
+    margin: 40px 0;
+	outline: 8px solid #ccc;
+}
+
+
 
 @media screen and (max-width: 700px){
     #socialIconsParent{
