@@ -20,7 +20,11 @@ body.single #primary #main .post .entry-content h2 {
     background-color: #6e99aa;
 }
 .single-post .hs-breadcrumbs,
-.page .hs-breadcrumbs {
+.page .hs-breadcrumbs,
+.archive.tag .hs-breadcrumbs,
+.archive.category .hs-breadcrumbs,
+.archive.date  .hs-breadcrumbs
+ {
     margin-top: 40px;
     font-size: 22px;
     background-color: #444;
@@ -29,4 +33,10 @@ body.single #primary #main .post .entry-content h2 {
 #hs-content > header > div > .hs-main-title {
     padding: 2%;
     background-color: #2f4650;
+}
+
+@media screen and (max-width: 700px){
+    #socialIconsParent{
+        display: none;
+    }
 }
