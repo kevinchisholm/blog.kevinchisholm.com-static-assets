@@ -61,18 +61,13 @@ body.single #primary #main .post .entry-content h2 {
 
 #secondary .widget {
     padding: 20px;
-    outline: 8px solid #ccc;
+    background-color: #ccc;
 }
 
 #secondary .widget-title {
     background-color: #2f4650;
     padding: 10px;
     color: #fff;
-}
-
-#secondary .widget {
-    padding: 20px;
-    outline: 8px solid #ccc;
 }
 
 #secondary  .widget.widget_recent_entries li {
@@ -99,22 +94,19 @@ body.single #primary #main .post .entry-content h2 {
 }
 
 article > div > h2:nth-child(2){
-    padding: 10px;
-    outline: 8px solid #ccc;
+    padding: 20px;
     background-color: #ededed;
     overflow: auto;
 }
 
 article > div > h2:first-child{
-    padding: 10px;
-    outline: 8px solid #ccc;
+    padding: 20px;
 	background-color: #ededed;
 	overflow: auto;
 }
 
 article > div > h2:not(:first-child){
-    padding: 10px;
-    outline: 8px solid #ccc;
+    padding: 20px;
 	background-color: #ededed;
 	overflow: auto;
 }
