@@ -14,6 +14,12 @@
 .home #hs-content .hs-main-header {
     padding: 50px!important
 }
+
+.home.page #hs-content header.hs-main-header {
+    background-image: none;
+    background-color: #333;
+}
+
 body.single #primary #main .post .entry-content p {
     font-size: 16px;
 }
