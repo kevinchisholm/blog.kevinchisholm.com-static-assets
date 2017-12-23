@@ -73,8 +73,8 @@
             menu.init(['facebook','twitter','pinterest','googleplus','email']);
         });
 
-        setTimeout(app.addSocialPluginHideArrow, 50);
-        setTimeout(app.showSocialPlugin, 500);
+        setTimeout(app.addSocialPluginHideArrow, 1000);
+        setTimeout(app.showSocialPlugin, 5000);
     };
 
     app.showSocialPlugin = function () {
