@@ -33,7 +33,7 @@
 
         app.loadSocialPlugin();
 
-        app.addVideoIconsToRecentEntries();
+        app.addFaIcons();
 
         app.report();
     };
@@ -141,13 +141,95 @@
         return retObj;
     };
 
-    app.addVideoIconsToRecentEntries = function () {
+    app.addFaIcons = function () {
+        app.addEnvelopeIconToContactHeaders();
+
+        app.addSearchIconToContactHeaders();
+
+        app.addUsersIconToContactHeaders();
+
+        app.addFolderIconToCategoriesHeaders();
+
+        app.addTagIconToCategoriesHeaders();
+
+        app.addCalendarIconToCategoriesHeaders();
+
+        app.addPageIconsToRecentEntries();
+    };
+
+    app.addEnvelopeIconToContactHeaders = function () {
+        var $contactHeader  = $("#text-22 .widget-title");
+
+        $contactHeader .each(function () {
+            var $this = $(this),
+                thisText = $this.text();
+
+            $this.html(app.constants.ENVELOPE_ICON_HTML + thisText);
+        });
+    }
+
+    app.addSearchIconToContactHeaders = function () {
+        var $contactHeader  = $("#search-2 .widget-title");
+
+        $contactHeader .each(function () {
+            var $this = $(this),
+                thisText = $this.text();
+
+            $this.html(app.constants.SEARCH_ICON_HTML + thisText);
+        });
+    }
+
+    app.addUsersIconToContactHeaders = function () {
+        var $contactHeader  = $("#s2_form_widget-2 .widget-title");
+
+        $contactHeader .each(function () {
+            var $this = $(this),
+                thisText = $this.text();
+
+            $this.html(app.constants.USERS_ICON_HTML + thisText);
+        });
+    }
+
+    app.addFolderIconToCategoriesHeaders = function () {
+        var $categoriesHeader  = $( "#tag_cloud-7 .widget-title");
+
+        $categoriesHeader .each(function () {
+            var $this = $(this),
+                thisText = $this.text();
+
+            $this.html(app.constants.FOLDER_OPEN_ICON_HTML + thisText);
+        });
+    }
+
+    app.addTagIconToCategoriesHeaders = function () {
+        var $categoriesHeader  = $( "#tag_cloud-6 .widget-title");
+
+        $categoriesHeader .each(function () {
+            var $this = $(this),
+                thisText = $this.text();
+
+            $this.html(app.constants.TAG_ICON_HTML + thisText);
+        });
+    }
+
+    app.addCalendarIconToCategoriesHeaders = function () {
+        var $categoriesHeader  = $( "#recent-posts-2 .widget-title");
+
+        $categoriesHeader .each(function () {
+            var $this = $(this),
+                thisText = $this.text();
+
+            $this.html(app.constants.CALENDAR_ICON_HTML + thisText);
+        });
+    }
+
+    app.addPageIconsToRecentEntries = function () {
         var $anchors = $('#secondary .widget.widget_recent_entries ul li a');
-        
+
         $anchors.each(function () {
             var $this = $(this),
                 thisText = $this.text();
-            
+
             $this.html('<i class="fa fa-file-text" style="font-size: 14px;margin-right: 5px;"></i>' + thisText);
         }); 
     };
@@ -162,6 +244,17 @@
 
     app.constants.OO_JS_INTERVIEW_QUESTIONS_JS_URL = 'https://sub1.kevinchisholm.com/blog/images/oojs-interview.js';
 
+    app.constants.ENVELOPE_ICON_HTML = '<i class="fa fa-envelope-o" style="margin-right: 5px;"></i>';
+
+    app.constants.SEARCH_ICON_HTML = '<i class="fa fa-search" style="margin-right: 5px;"></i>';
+
+    app.constants.USERS_ICON_HTML = '<i class="fa fa-user-plus" style="margin-right: 5px;"></i>';
+
+    app.constants.TAG_ICON_HTML = '<i class="fa fa-tags" style="margin-right: 5px;"></i>';
+
+    app.constants.CALENDAR_ICON_HTML = '<i class="fa fa-calendar" style="margin-right: 5px;"></i>';
+
+    app.constants.FOLDER_OPEN_ICON_HTML = '<i class="fa fa-folder-open-o"" style="margin-right: 5px;"></i>';
 
     //initialize the applcation
     app.init();
