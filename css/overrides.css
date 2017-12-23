@@ -215,6 +215,12 @@ iframe[src^="https://www.youtube.com"] {
     left: -5px;
 }
 
+#hs-back-top {
+    height: 100px;
+    width: 100px;
+    font-size: 100px;
+}
+
 @media screen and (max-width: 700px){
     #socialIconsParent{
         display: none;
