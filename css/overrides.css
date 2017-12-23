@@ -118,6 +118,14 @@ article > div > h2:not(:first-child){
 	background-color: #ededed;
 	overflow: auto;
 }
+
+article img.alignleft {
+    background-color: #2f4650;
+    outline: 8px solid #2f4650;
+    top: -5px;
+    position: relative;
+    left: -5px;
+}
  
 iframe[src^="https://www.youtube.com"] {
     margin: 40px 0;
