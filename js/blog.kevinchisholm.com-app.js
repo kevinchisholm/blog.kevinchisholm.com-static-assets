@@ -11,7 +11,7 @@
     app.constants = {};
 
     app.config = {
-        debugOverride: true
+        debugOverride: false
     };
 
     //initializes the applcation
@@ -72,6 +72,37 @@
         require(["social-menu"], function(menu) {
             menu.init(['facebook','twitter','pinterest','googleplus','email']);
         });
+
+        setTimeout(app.addSocialPluginHideArrow, 50);
+        setTimeout(app.showSocialPlugin, 500);
+    };
+
+    app.showSocialPlugin = function () {
+        $(app.constants.SOCIAL_PLUGIN_CONTAINER_SELECTOR).animate({
+            left: "0"
+        }, 1000, function() {
+            //animation complete.
+        });
+    };
+
+    app.hideSocialPlugin = function () {
+        $(app.constants.SOCIAL_PLUGIN_CONTAINER_SELECTOR).animate({
+            left: "-500px"
+        }, 1000, function() {
+            //animation complete.
+        });
+    };
+
+    app.addSocialPluginHideArrow = function () {
+        var $arrow = $(app.constants.SOCIAL_PLUGIN_CONTAINER_ARROW_HTML);
+
+        $(app.constants.SOCIAL_PLUGIN_CONTAINER_SELECTOR)
+        .find('ul')
+        .append($arrow);
+
+        setTimeout(function () {
+            $arrow.on('click', app.hideSocialPlugin);
+        }, 1000);
     };
 
     app.loadOoJsInteriewQuestionsJs = function () {
@@ -120,6 +151,10 @@
             $this.html('<i class="fa fa-file-text" style="font-size: 14px;margin-right: 5px;"></i>' + thisText);
         }); 
     };
+
+    app.constants.SOCIAL_PLUGIN_CONTAINER_SELECTOR = '#socialIconsParent';
+
+    app.constants.SOCIAL_PLUGIN_CONTAINER_ARROW_HTML = '<li class="arrow"><i class="fa fa-arrow-left" aria-hidden="true"></i></li>';
 
     app.constants.SOCIAL_PLUGIN_RQEUIRE_URL = 'https://blog.kevinchisholm.com/js/social-plugin/require.js';
 

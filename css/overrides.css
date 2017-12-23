@@ -188,6 +188,41 @@ iframe[src^="https://www.youtube.com"] {
     color: #fff;
  }
 
+
+ #socialIconsParent {
+    position: fixed;
+    z-index: 9999999;
+    top: 50%!important;
+    left: -500px;
+    width: 70px!important;
+    background-color: #EE3B24!important;
+    border: 4px solid #ededed!important;
+    padding: 10px;
+    overflow: auto;
+    text-align: center;
+}
+
+#socialIconsParent ul {
+	width: auto;
+}
+
+#socialIconsParent ul li{
+	margin-bottom: 10px;
+}
+
+#socialIconsParent ul .arrow i{
+    font-size: 22px;
+    color: #ededed;
+    padding: 0;
+    position: relative;
+}
+
+#socialIconsParent ul .arrow:hover i{
+    color: #fff;
+    cursor: pointer;
+    left: -5px;
+}
+
 @media screen and (max-width: 700px){
     #socialIconsParent{
         display: none;
