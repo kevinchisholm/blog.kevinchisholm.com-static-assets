@@ -264,6 +264,13 @@ iframe[src^="https://www.youtube.com"] {
   color: #cfcfc4 !important;
 }
 
+
+/* misc */
+.gist .pl-smi,
+.gist .pl-s .pl-s1 {
+    color: #2aab2a!important;
+}
+
 /* misc */
 .gist .pl-pds,
 .gist .pl-s .pl-pse .pl-s1,
@@ -274,7 +281,7 @@ iframe[src^="https://www.youtube.com"] {
     color: #538369!important;
 }
 
-/* START embed gist */
+/* END embed gist */
 
 
  #socialIconsParent {
