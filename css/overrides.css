@@ -187,6 +187,96 @@ iframe[src^="https://www.youtube.com"] {
  }
 
 
+/* START embed gist */
+
+
+/* main */
+
+.gist {
+	outline: 8px solid #ccc;
+}
+
+.gist .blob-code-inner {
+    font-size: 14px!important;
+}
+
+.gist-meta {
+	background-color: #2f4650!important;
+	color: #fff!important;
+}
+
+.gist-meta a{
+	color: #fff!important;
+}
+
+
+.gist-meta a:nth-child(2){
+	color: #f96666!important;
+}
+
+.gist-data tbody {
+	background-color: #333;
+}
+
+
+/* Line Numbers */
+.gist-data tbody td:nth-of-type(1) {
+  color: #7993aa !important;
+}
+
+/* Code */
+.gist-data tbody td:nth-of-type(2){
+  color: #adad9a !important;
+}
+
+/* Comments */
+.pl-c
+{
+  color: #aeeae !important;
+}
+
+/* Function */
+.pl-k, tbody tr:first-child .blob-code, tbody tr:last-child .blob-code
+{
+  color: #569CD6 !important;
+}
+
+/* Function Name */
+.pl-en
+{
+  color: #f8a44e !important;
+}
+
+/* Function Method */
+.pl-c1
+{
+  color: #61a8ff !important;
+}
+/* "'s around Strings */
+.pl-pds
+{
+  color: #f6f736 !important;
+}
+
+/* Strings */
+.pl-s
+{
+  color: #cfcfc4 !important;
+}
+
+/* misc */
+.gist .pl-pds,
+.gist .pl-s .pl-pse .pl-s1,
+.gist .pl-sr,
+.gist .pl-sr .pl-cce,
+.gist .pl-sr .pl-sre,
+.gist .pl-sr .pl-sra {
+    color: #538369!important;
+}
+
+/* START embed gist */
+
+
  #socialIconsParent {
     position: fixed;
     z-index: 9999999;
